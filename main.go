@@ -9,46 +9,21 @@ import (
 func main() {
 
 	var height int
-	//space := " "
 	fmt.Println("Введите высоту ёлочки:")
 	fmt.Scan(&height)
-	fmt.Println()
-	for i := 0; i != height; i++ {
-		j := i
 
-		for d := i + 1; d < height; d++ {
-
-			fmt.Print(" ")
+	space := " "
+	star := "*"
+	var line string
+	for i := 1; i <= height; i++ {
+		line = ""
+		for k := height - i; k > 0; k-- {
+			line += space
 		}
-
-		for i := height; i > 0; i-- {
-			for j := 0; j < i; j++ {
-				fmt.Print(" ")
-			}
-			fmt.Println("*")
+		for k := (i-1)*2 + 1; k > 0; k-- {
+			line += star
 		}
-
+		fmt.Println(line)
 	}
-
-	fmt.Println()
-	fmt.Println()
-
-	/* 	var height int
-	   	fmt.Println("Введите высоту ёлочки:")
-	   	fmt.Scan(&height)
-
-	   	space := " "
-	   	star := "*"
-	   	var line string
-	   	for i := 1; i <= height; i++ {
-	   		line = ""
-	   		for k := height - i; k > 0; k-- {
-	   			line += space
-	   		}
-	   		for k := (i-1)*2 + 1; k > 0; k-- {
-	   			line += star
-	   		}
-	   		fmt.Println(line)
-	   	} */
 
 }
